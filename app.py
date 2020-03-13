@@ -36,9 +36,13 @@ while run:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
-        if event.type == pygame.MOUSEBUTTONDOWN:
+        if event.type == pygame.MOUSEBUTTONDOWN and screen == 1:
             if pygame.mouse.get_pos() >= (x,y) and pygame.mouse.get_pos() <= (x + w, y + h):
                 screen = 2
+
+        elif event.type == pygame.MOUSEBUTTONDOWN and screen == 2:
+            if pygame.mouse.get_pos() >= (x,y) and pygame.mouse.get_pos() <= (x + w, y + h):
+                screen = 1
 
     iconChange("settings.png", w, h)
     iconChange("arrow.png", w, h)
