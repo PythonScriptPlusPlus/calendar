@@ -12,6 +12,7 @@ pygame.init()
 """
 
 """ ТЗ по-frontend'у
+нет
 """
 
 def lDay(year, month):
